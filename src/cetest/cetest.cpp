@@ -4,7 +4,7 @@
 #include <QLibrary>
 #include <QMessageBox>
 
-cetest::cetest(QWidget *parent, Qt::WFlags flags)
+cetest::cetest(QWidget *parent, Qt::WindowFlags flags)
     : QMainWindow(parent, flags), ge(0)
 {
     ui.setupUi(this);

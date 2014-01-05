@@ -12,8 +12,9 @@
 float const SplineDisplayerWidget::MY_PI = 3.1415926f;
 
 	SplineDisplayerWidget::SplineDisplayerWidget(double deltaT, QWidget *parent /* = 0 */)
-        : QGLWidget(parent), m_axis(0), m_deltaT(deltaT), lastPos(0, 0),
-        ctrlSelected(-1), m_bIfModify(false), m_spline_data(0){
+        : QGLWidget(parent), m_axis(0), lastPos(0, 0),
+        ctrlSelected(-1), m_bIfModify(false), m_spline_data(0),
+        m_deltaT(deltaT){
 
         m_CameraPos = aaAaa::Vector3(122, 122, 127);
 
@@ -42,8 +43,8 @@ float const SplineDisplayerWidget::MY_PI = 3.1415926f;
 	//}
 	void SplineDisplayerWidget::drawGrid(void){
 		double distance = m_CameraPos.z - Z_VALUE;
-		double halfwidth = distance;
-		double halfheight = halfwidth /** (double(this->width()) / double(this->height()))*/;
+		//double halfwidth = distance;
+		//double halfheight = halfwidth /** (double(this->width()) / double(this->height()))*/;
 
         if(distance > 300)
             distance = 80;

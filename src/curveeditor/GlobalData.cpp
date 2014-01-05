@@ -3,10 +3,13 @@
 #include <QTextCodec>
 
 GlobalData::GlobalData(){
+    
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF8"));
+    /*
     QTextCodec *codec = QTextCodec::codecForName("System");
     QTextCodec::setCodecForTr(codec);
     QTextCodec::setCodecForLocale(codec);
-    QTextCodec::setCodecForCStrings(codec);
+    QTextCodec::setCodecForCStrings(codec);*/
 }
 
 void GlobalData::addGe(graphiceditor *ge){

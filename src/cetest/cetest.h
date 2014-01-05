@@ -1,7 +1,7 @@
 #ifndef CETEST_H
 #define CETEST_H
 
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include "ui_cetest.h"
 
 #include <vector>
@@ -15,7 +15,7 @@ class cetest : public QMainWindow
     Q_OBJECT
 
 public:
-    cetest(QWidget *parent = 0, Qt::WFlags flags = 0);
+    cetest(QWidget *parent = 0, Qt::WindowFlags flags = 0);
     ~cetest();
 
 private:
